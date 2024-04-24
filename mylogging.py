@@ -6,7 +6,7 @@ class LogLevel(Enum):
     DEBUG = logging.DEBUG
     INFO = logging.INFO
 
-def show_log(level: LogLevel):
+def register_log(level: LogLevel):
     logging.basicConfig(stream=sys.stdout, level=level.value)
     logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
